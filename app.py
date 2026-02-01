@@ -25,10 +25,10 @@ def exibir_nome_do_programa():
 
 # Exibe o menu principal com as opções disponíveis
 def exibir_opcoes():
-    print('1. Cadastrar restaurante')
-    print('2. Listar restaurantes')
-    print('3. Alternar estado do restaurante')
-    print('4. Sair\n')
+    print('\n1. Cadastrar restaurante')
+    print('\n2. Listar restaurantes')
+    print('\n3. Alternar estado do restaurante')
+    print('\n4. Sair\n')
 
 # Finaliza o aplicativo
 def finalizar_app():
@@ -151,7 +151,7 @@ def escolher_opcao():
 
 # Função principal do programa
 def main():
-    os.system('cls')  # Limpa o terminal
+    os.system('cls')  # Limpa o terminal (Windows)
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
