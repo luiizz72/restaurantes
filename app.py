@@ -9,19 +9,19 @@ import os
 restaurantes = [
     {'nome': 'Praça', 'categoria': 'Japonesa', 'ativo': False},
     {'nome': 'Pizza Suprema', 'categoria': 'Pizza', 'ativo': True},
-    {'nome': 'Cantina', 'categoria': 'Italiano', 'ativo': False}
-]
+    {'nome': 'Cantina', 'categoria': 'Italiano', 'ativo': False}]
 
-# Função que exibe o nome do programa em ASCII ART
 def exibir_nome_do_programa():
+    print("\033[34m")  # Azul
     print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
 ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
 ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
 ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
-╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
+╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
 """)
+    print("\033[0m")  # Reseta a cor
 
 # Exibe o menu principal com as opções disponíveis
 def exibir_opcoes():
@@ -32,7 +32,9 @@ def exibir_opcoes():
 
 # Finaliza o aplicativo
 def finalizar_app():
+    print("\033[31m")  # Vermelho
     exibir_subtitulo('Finalizar app')
+    print("\033[0m")   # Reseta a cor
 
 # Aguarda o usuário apertar uma tecla e volta para o menu principal
 def voltar_ao_menu_principal():
@@ -65,8 +67,9 @@ def cadastrar_novo_restaurante():
     Output:
     - Adiciona um novo restaurante à lista 'restaurantes'
     """
+    print("\033[31m")  # Vermelho
     exibir_subtitulo('Cadastro de novos restaurantes')
-
+    print("\033[0m")   # Reseta a cor
     # Recebe os dados do usuário
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria = input(f'Digite o nome da categoria do restaurante {nome_do_restaurante}: ')
@@ -86,7 +89,9 @@ def cadastrar_novo_restaurante():
 
 # Lista todos os restaurantes cadastrados
 def listar_restaurantes():
+    print("\033[31m")  # Vermelho
     exibir_subtitulo('Listando restaurantes')
+    print("\033[0m")   # Reseta a cor
 
     # Cabeçalho da tabela
     print(f'{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status')
@@ -104,8 +109,9 @@ def listar_restaurantes():
 
 # Alterna o estado (ativo/desativado) de um restaurante
 def alternar_estado_restaurante():
+    print("\033[31m")  # Vermelho
     exibir_subtitulo('Alterando estado do restaurante')
-
+    print("\033[0m")   # Reseta a cor
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado = False
 
